@@ -43,6 +43,8 @@ app.use((req, res, next) => {
 
 /** Routes go here */
 app.use('/api/sample', sampleRoutes);
+/** enable swagger */
+app.use('/api/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 /** Error handling */
 app.use((req, res, next) => {
@@ -53,8 +55,7 @@ app.use((req, res, next) => {
     });
 });
 
-/** enable swagger */
-app.use('/api/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+
 
 const httpServer = http.createServer(app);
 

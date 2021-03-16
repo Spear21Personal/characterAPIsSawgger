@@ -3,6 +3,6 @@ import controller from '../controllers/sample';
 
 const router = express.Router();
 
-router.get('/ping', controller.serverHealthCheck);
+router.get('/', controller.serverHealthCheck);
 
 export = router;

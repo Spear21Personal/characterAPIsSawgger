@@ -1,0 +1,12 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Typescript Swagger Express Boilerplpate",
+        "description": "Boilerplate to setup Typescript API with Swagger",
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/licenses/MIT"
+        }
+    }
+}

@@ -5,7 +5,8 @@ import logging from './config/logging';
 import config from './config/config';
 import { connect } from "./database/database";
 import sampleRoutes from './routes/sample';
-import swaggerUi from 'swagger-ui-express';
+import { raceRouter } from './routes/raceRoute';
+;import swaggerUi from 'swagger-ui-express';
 import * as swaggerDocument from './swagger.json'
 
 const NAMESPACE = 'Server';
@@ -43,6 +44,7 @@ app.use((req, res, next) => {
 
 /** Routes go here */
 app.use('/api/sample', sampleRoutes);
+app.use('/api/race', raceRouter);
 /** enable swagger */
 app.use('/api/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 

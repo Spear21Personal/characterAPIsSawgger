@@ -50,10 +50,10 @@ const raceSchema = new mongoose.Schema({
         required: true
     },
     abilityIncrease: {
-        type: Array
+        type: [String]
     },
     aligment: {
-        type: Array,
+        type:[String],
         required: true
     },
     speed:{
@@ -61,28 +61,28 @@ const raceSchema = new mongoose.Schema({
         required: true
     },
     history: {
-        type: Array,
+        type: [String],
         required: true
     },
     languages: {
-        type: Array,
+        type: [String],
         required: true
     },
     damageResitance:{
-        type: Array,
+        type: [String],
         required: true
     },
     maleNames:{
-        type: Array
+        type: [String]
     },
     femaleNames: {
-        type: Array
+        type: [String]
     },
     clanNames: {
-        type: Array
+        type: [String]
     },
     subRaces: {
-        type: Array
+        type: [String]
     }
 
 })

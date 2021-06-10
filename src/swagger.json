@@ -1,5 +1,5 @@
 {
-    "swagger": "2.0",
+    "openapi": "3.0.0",
     "info": {
         "version": "1.0.0",
         "title": "Typescript Swagger Express Boilerplpate",
@@ -10,12 +10,44 @@
 
         }   
     },
+    "tags": [
+        {
+            "name": "Race",
+            "description": "APIs for Character Race"
+    }
+],
+"paths": {
+    "/race": {
+        "get": {
+            "parameters": [
+                {
+
+                }
+            ],
+            "tags":[
+                "Race"
+            ],
+            "summary": "get race characterizations",
+            "responses": {
+                "200": {
+                    "description": "Success",
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+},
          "components": {
             "schemas": {
                 "Classes": {
                     "type": "object",
                     "required": "name",
-                  
                         
                     "properties": {
                         "id": {

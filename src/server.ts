@@ -7,7 +7,8 @@ import { connect } from "./database/database";
 import sampleRoutes from './routes/sample';
 import { raceRouter } from './routes/raceRoute';
 ;import swaggerUi from 'swagger-ui-express';
-import * as swaggerDocument from './swagger.json'
+import * as swaggerDocument from './swagger.json';
+//import { RegisterRoutes} from './routes';
 
 const NAMESPACE = 'Server';
 const app = express();

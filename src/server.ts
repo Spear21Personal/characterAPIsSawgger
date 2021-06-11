@@ -3,9 +3,10 @@ import bodyParser from 'body-parser';
 import express from 'express';
 import logging from './config/logging';
 import config from './config/config';
-import { connect } from "./database/database";
+
 import sampleRoutes from './routes/sample';
 import { raceRouter } from './routes/raceRoute';
+import raceController from './controllers/raceController'
 ;import swaggerUi from 'swagger-ui-express';
 import * as swaggerDocument from './swagger.json';
 //import { RegisterRoutes} from './routes';
@@ -45,7 +46,7 @@ app.use((req, res, next) => {
 
 /** Routes go here */
 app.use('/api/sample', sampleRoutes);
-app.use('/api/race', raceRouter);
+app.use('/api/get/races', raceController.getALlRaces);
 /** enable swagger */
 app.use('/api/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
@@ -62,7 +63,7 @@ app.use((req, res, next) => {
 
 const httpServer = http.createServer(app);
 
-connect();
+
 
 app.listen(
     config.server.port, () => logging.info(NAMESPACE, `Server is running ${config.server.hostname}:${config.server.port}`));

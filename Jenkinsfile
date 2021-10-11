@@ -16,10 +16,15 @@ node () {
     }
     stage('Build') {
         nodejs('nodejs'){
-            sh 'npm run-script run-prod'
+            sh 'npm run-script build'
             echo "Build Complete"
         }
 
+    }
+    stage("start") {
+        nodejs(nodejs) {
+            npm start server.js
+        }
     }
     // stage('Package Build') {
     // sh 'tar -zcvf bundle.tar.gz'

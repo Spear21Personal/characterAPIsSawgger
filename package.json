@@ -5,8 +5,7 @@
   "main": "src/server.ts",
   "scripts": {
     "serve": "nodemon src/server.ts",
-    "build": "tsoa spec-and-routes && tsc",
-    "run-prod": "tsoa spec-and-routes && tsc && pm2 startOrgracefulReload"
+    "build": "tsoa spec-and-routes && tsc"
   },
   "author": "Lloyd Spear",
   "license": "ISC",

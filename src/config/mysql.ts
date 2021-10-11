@@ -3,8 +3,8 @@ import mysql from 'mysql';
 import config from './config';
 
 const params = {
-    user: config.mysql.user || "admin",
-    password: config.mysql.password || 'RM5407ljs',
+    user: config.mysql.user || "tinkle",
+    password: config.mysql.password || 'notapassword',
     host: config.mysql.host || "localhost",
     database: config.mysql.database || 'character'
 }

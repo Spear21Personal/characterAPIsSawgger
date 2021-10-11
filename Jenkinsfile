@@ -16,7 +16,7 @@ node () {
     }
     stage('Build') {
         nodejs('nodejs'){
-            sh 'npm run build'
+            sh 'npm run-script build'
             echo "Build Complete"
         }
 

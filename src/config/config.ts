@@ -5,7 +5,7 @@ dotenv.config();
 const MYSQL_HOST = process.env.RDS_DB_HOST;
 const MYSQL_DATABASE = process.env.RDS_DB_DATABASE;
 const MYSQL_USER = process.env.RDS_DB_USER;
-const MYSQL_PASSWORD = process.env.RDS_DB_PASSWORD;
+const MYSQL_PASSWORD = process.env.RDS_BD_PASSWSORD;
 
 const MYSQL = {
     host: MYSQL_HOST,

@@ -1,9 +1,9 @@
 import {Race} from '../database/models/race.model';
 
-export type RaceCreatiuonParams = Pick<Race, "name" | "aligment" | "subRaces">;
+export type RaceCreatiuonParams = Pick<any, "name" | "aligment" | "subRaces">;
 
 export class RaceService {
-    public get(id: number, name?: string): Race {
+    public get(id: number, name?: string):  any {
  return {
     name: 'some name',
     maxAge: 5,

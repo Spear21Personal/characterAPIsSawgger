@@ -46,7 +46,7 @@ app.use((req, res, next) => {
 
 /** Routes go here */
 app.use('/api/sample', sampleRoutes);
-app.use('/api/get/races', raceController.getALlRaces);
+app.use('/api',raceRouter);
 /** enable swagger */
 app.use('/api/swagger', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 

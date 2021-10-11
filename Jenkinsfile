@@ -23,7 +23,8 @@ node () {
     }
     stage("start") {
         nodejs(nodejs) {
-            npm start server.js
+            sh 'npm start server.js'
+            echo "running"
         }
     }
     // stage('Package Build') {

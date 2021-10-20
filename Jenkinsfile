@@ -16,7 +16,6 @@ node () {
     }
     stage('Build') {
         nodejs('nodejs'){
-            sh 'npm install pm2@latest -g'
             sh 'npm run-script build'
             echo "Build Complete"
         }
@@ -44,7 +43,7 @@ node('build-serve-one') {
     echo 'Copy'
     // sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz'
     sh 'yes | sudo cp -R build/ /var/www/api'
-    sh 'pm2 start server.js'
+    sh 'node server.js'
     echo ' Complete'
 
 }

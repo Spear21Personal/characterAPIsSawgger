@@ -17,7 +17,7 @@
     }
 ],
 "paths": {
-    "/race": {
+    "/api/get/races": {
         "get": {
             "parameters": [
                 {

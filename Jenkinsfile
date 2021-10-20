@@ -16,17 +16,13 @@ node () {
     }
     stage('Build') {
         nodejs('nodejs'){
+            sh 'npm install pm2@latest -g'
             sh 'npm run-script build'
             echo "Build Complete"
         }
 
     }
-    stage("start") {
-        nodejs(nodejs) {
-            sh 'npm start server.js'
-            echo "running"
-        }
-    }
+    
     // stage('Package Build') {
     // sh 'tar -zcvf bundle.tar.gz'
     // }
@@ -47,7 +43,8 @@ node('build-serve-one') {
 
     echo 'Copy'
     // sh 'yes | sudo cp -R bundle.tar.gz /var/www/html && cd /var/www/html && sudo tar -xvf bundle.tar.gz'
-    sh 'yes | sudo cp -R dist/ /var/www/api'
+    sh 'yes | sudo cp -R build/ /var/www/api'
+    sh 'pm2 start server.js'
     echo ' Complete'
 
 }
